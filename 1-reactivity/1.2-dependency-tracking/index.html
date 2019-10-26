@@ -1,0 +1,26 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="./index.js"></script>
+</head>
+<body>
+  <script>
+    //依赖
+    const dep = new Dep();
+
+    autorun(() => {
+      // 依赖是会不断添加的
+      dep.depend();
+      console.log('update');
+    })
+    //should log: "updated"
+
+    //调用这个方法，autorun会再次执行？
+    dep.notify(); 
+    //should log: "updated"
+  </script>
+</body>
+</html>

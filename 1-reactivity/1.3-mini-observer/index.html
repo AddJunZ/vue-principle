@@ -1,0 +1,25 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="./index.js"></script>
+</head>
+<body>
+  <script>
+    const state = {
+      count: 0
+    }
+
+    observe(state);
+
+    autorun(() => {
+      console.log(state.count)
+    })
+
+    state.count++;
+  </script>
+</body>
+
+</html>

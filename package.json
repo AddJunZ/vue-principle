@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "browserify": "^16.5.0",
+    "path-to-regexp": "^3.1.0",
+    "vue": "^2.6.10"
+  },
+  "scripts": {
+    "bundle":"browserify ./5-routing/5.3-path-to-regexp/index.js > ./5-routing/5.3-path-to-regexp/bundle.js"
+  }
+}

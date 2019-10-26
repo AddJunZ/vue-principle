@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="../../node_modules/vue/dist/vue.js"></script>
+  <script src="./index.js"></script>
+</head>
+
+<body>
+  <script>
+    // Vue包裹的整个对象是vm.$options
+    const vm = new Vue({
+      data: { foo: 10 },
+      rules: {
+        foo: {
+          validate: value => value > 1,
+          message: 'foo must be greater than one'
+        }
+      }
+    })
+    vm.foo = 0
+    //should log: "foo must be greater than one"
+  </script>
+</body>
+
+</html>
